@@ -84,4 +84,21 @@ let orders = [
 ];
 
 let sumPurchasedAmount = 0;
+let totalOrderPrices = 0;
 // Start coding here
+for (let i=0; i<orders.length; i++) {
+  sumPurchasedAmount = orders[i]['productPrice']*orders[i]['productQuantity'];
+  totalOrderPrices += sumPurchasedAmount;
+}
+
+console.log(`Total: ${totalOrderPrices}`);
+
+/*
+ให้ใช้ For Loop และ Array orders จากข้อก่อนหน้า 
+เพื่อหายอดรวมของสินค้าจากทุกรายการใน Array และ
+แสดงตัวเลขนี้บนหน้าจอด้วย console.log() ตามรูปแบบนี้
+
+"Total: <total-order-prices>";
+<total-order-prices> คือ ยอดรวมจากทุกรายการ
+Hint: ยอดรวมของแต่ละรายการ = จำนวนสินค้า x ราคาสินค้า
+*/

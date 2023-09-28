@@ -86,3 +86,19 @@ let orders = [
 let birdiePurchasedAmount;
 
 // Start coding here
+for (let i=0; i<orders.length; i++) {
+  if (orders[i]['customerName'] === "Birdie Shepland") {
+    birdiePurchasedAmount = orders[i]['productPrice']*orders[i]['productQuantity'];
+  }
+}
+
+console.log(`Total price is ${birdiePurchasedAmount}`);
+
+/*
+ให้ใช้ For Loop และ Array orders จากข้อก่อนหน้า 
+เพื่อหาว่าลูกค้าที่ชื่อ "Birdie Shepland" จ่ายเงินซื้อสินค้าไปทั้งหมดเท่าไหร่
+เมื่อหาได้แล้วให้ทำการแสดงผลค่าออกมาดูทางหน้าจอด้วย console.log() ตามรูปแบบนี้
+
+"Total price is <birdie-purchase-amount>";
+<birdie-purchase-amount> คือ จำนวนเงินทั้งหมดที่ Birdie จ่ายไป
+*/

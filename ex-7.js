@@ -85,3 +85,46 @@ let orders = [
 
 const jcbOrders = [];
 // Start coding here
+for (let i=0; i<orders.length; i++) {
+  if (orders[i]['creditCardType'] === "jcb") {
+    jcbOrders.push(orders[i]);
+  }
+}
+
+console.log(jcbOrders);
+
+
+/*ให้ใช้ For Loop และ Array orders จากข้อก่อนหน้า 
+เพื่อหารายการทั้งหมดที่จ่ายเงินด้วยบัตรเครดิตประเภท "jcb"
+เมื่อเจอแล้วให้นำ Object ของรายการเหล่านั้น
+ไปบรรจุลงใน Array ที่มีชื่อว่า jcbOrders
+jcbOrders ควรจะมี Value แบบนี้
+
+[
+    {
+      id: 2,
+      customerName: "Celia Dary",
+      productName: "Bread - Pumpernickle, Rounds",
+      productPrice: 10746,
+      productQuantity: 87,
+      creditCardType: "jcb",
+    },
+    {
+      id: 5,
+      customerName: "Kennith Bussons",
+      productName: "Wine - White, Pinot Grigio",
+      productPrice: 94432,
+      productQuantity: 75,
+      creditCardType: "jcb",
+    },
+    {
+      id: 9,
+      customerName: "Cris Druce",
+      productName: "Bar Mix - Lemon",
+      productPrice: 83104,
+      productQuantity: 6,
+      creditCardType: "jcb",
+    },
+  ];
+  
+*/

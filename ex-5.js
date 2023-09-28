@@ -89,3 +89,33 @@ let maxPurchasedAmount;
 let maxPurchasedId;
 
 // Start coding here
+maxPurchasedAmount = 0;
+
+for (let i=0; i<orders.length; i++) {
+  currentPurchasedAmount = orders[i]['productPrice']*orders[i]['productQuantity'];
+  if (currentPurchasedAmount > maxPurchasedAmount) {
+    maxPurchasedAmount = currentPurchasedAmount;
+    maxPurchasedId = orders[i]['id'];
+  }
+}
+
+console.log(`Order id: ${maxPurchasedId}, Total price: ${maxPurchasedAmount}`)
+
+/*
+orders เก็บข้อมูลเป็น Array ที่บรรจุ Object ที่แสดงรายการคำสั่งซื้อสินค้า
+แต่ละ Object จะมี Property ดังนี้
+Key id เก็บข้อมูลลำดับของรายการเป็น Number
+Key CustomerName เก็บข้อมูลชื่อของลูกค้าเป็น String
+Key productName เก็บข้อมูลชื่อของสินค้าที่ซื้อเป็น String
+Key productPrice เก็บข้อมูลราคาสินค้าต่อชิ้นเป็น Number
+Key productQuantity เก็บจำนวนของสินค้าที่ซื้อเป็น Number
+Key creditCardType เก็บประเภทของบัตรเครดิตเป็น String
+
+ให้ใช้ For Loop เพื่อหารายการที่มียอดซื้อสินค้ารวมมากที่สุด
+เมื่อหาได้แล้วให้ทำการแสดงผลค่าออกมาดูทางหน้าจอด้วย console.log() 
+ตามรูปแบบนี้
+
+"Order id: <id-number>, Total price: <total-price-amount>";
+<id-number> คือ เลข Id ของรายการนั้น
+<total-price-amount> คือ ราคารวมของสินค้าทั้งหมดในรายการนั้น
+*/
